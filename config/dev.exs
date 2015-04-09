@@ -27,8 +27,8 @@ config :markbox_delta, MarkboxDelta.Endpoint,
 config :logger, :console, format: "[$level] $message\n"
 
 # Configure your database
-config :markbox_delta, MarkboxDelta.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "markbox_delta_dev"
+# config :markbox_delta, MarkboxDelta.Repo,
+#   adapter: Ecto.Adapters.Postgres,
+#   username: "postgres",
+#   password: "postgres",
+#   database: "markbox_delta_dev"

@@ -10,7 +10,7 @@ defmodule MarkboxDelta do
       # Start the endpoint when the application starts
       supervisor(MarkboxDelta.Endpoint, []),
       # Start the Ecto repository
-      worker(MarkboxDelta.Repo, []),
+      # worker(MarkboxDelta.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(MarkboxDelta.Worker, [arg1, arg2, arg3]),
     ]

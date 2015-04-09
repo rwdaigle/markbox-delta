@@ -10,10 +10,10 @@ config :markbox_delta, MarkboxDelta.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :markbox_delta, MarkboxDelta.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "markbox_delta_test",
-  size: 1,
-  max_overflow: false
+# config :markbox_delta, MarkboxDelta.Repo,
+#   adapter: Ecto.Adapters.Postgres,
+#   username: "postgres",
+#   password: "postgres",
+#   database: "markbox_delta_test",
+#   size: 1,
+#   max_overflow: false

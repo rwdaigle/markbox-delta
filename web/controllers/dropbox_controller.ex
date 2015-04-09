@@ -8,12 +8,12 @@ defmodule MarkboxDelta.DropboxController do
   end
 
   def webhook(conn, %{"delta" => %{"users" => users}}) do
-    json conn, %{users: users}
+    text conn, "OK"
   end
 
   def webhook(conn, _params) do
     conn
     |> put_status(404)
-    |> text "Unrecognized request"
+    |> text "ERROR"
   end
 end
