@@ -18,7 +18,7 @@ defmodule MarkboxDelta.Web do
 
   def model do
     quote do
-      use Ecto.Model
+      # use Ecto.Model
     end
   end
 

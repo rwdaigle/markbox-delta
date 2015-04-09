@@ -24,7 +24,7 @@ config :markbox_delta, MarkboxDelta.Endpoint,
   ]
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+# config :logger, :console, format: "[$level] $message\n"
 
 # Configure your database
 # config :markbox_delta, MarkboxDelta.Repo,
