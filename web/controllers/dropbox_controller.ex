@@ -16,7 +16,7 @@ defmodule MarkboxDelta.DropboxController do
   end
 
   def webhook(conn, %{"delta" => %{"users" => users}}) do
-    process_users(users)
+    Delta.process(users)
     text conn, "OK"
   end
 
@@ -24,13 +24,5 @@ defmodule MarkboxDelta.DropboxController do
     conn
     |> put_status(404)
     |> text "ERROR"
-  end
-
-  defp process_users([user_id | tail]) do
-    Task.start(Delta, :process, [user_id])
-    process_users(tail)
-  end
-
-  defp process_users([]) do
   end
 end

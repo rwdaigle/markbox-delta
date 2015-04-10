@@ -9,7 +9,7 @@ defmodule MarkboxDelta.DropboxControllerTest do
   end
 
   test "POST /dropbox/webhook" do
-    conn = post conn(), "/dropbox/webhook", %{"delta" => %{"users" => [12, 67, 123]}}
+    conn = post conn(), "/dropbox/webhook", %{"delta" => %{"users" => ["12", "67", "123"]}}
     assert conn.status == 200
     assert conn.resp_body == "OK"
   end

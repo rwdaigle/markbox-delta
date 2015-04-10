@@ -17,7 +17,7 @@ defmodule MarkboxDelta.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {MarkboxDelta, []},
-     applications: [:phoenix, :cowboy, :logger]] # , :ecto
+     applications: [:phoenix, :cowboy, :logger, :httpotion]] # , :ecto
   end
 
   # Specifies which paths to compile per environment
@@ -29,9 +29,12 @@ defmodule MarkboxDelta.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, "~> 0.11"},
-    #  {:phoenix_ecto, "~> 0.3"},
-    #  {:postgrex, ">= 0.0.0"},
+     {:phoenix_ecto, "~> 0.3"},
+     {:postgrex, ">= 0.0.0"},
      {:phoenix_live_reload, "~> 0.3"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
+     {:httpotion, "~> 2.0.0"},
+     {:mock, "~> 0.1.0"}]
   end
 end
